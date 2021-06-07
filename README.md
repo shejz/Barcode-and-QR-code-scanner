@@ -11,4 +11,4 @@ The **ZBar library** will be used together with OpenCV to scan and decode barcod
 
 ### Decoding barcodes and QR codes
 
-![]()
+![](https://github.com/shejz/Barcode-and-QR-code-scanner/blob/main/qr-barcode.png)
