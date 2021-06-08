@@ -1,4 +1,4 @@
-## Barcode and QR code scanner
+## Barcode and QR Code Scanner
 Barcode and QR code Scanner using ZBar and OpenCV
 
 The **ZBar library** will be used together with OpenCV to scan and decode barcodes and QR codes.
@@ -12,3 +12,29 @@ The **ZBar library** will be used together with OpenCV to scan and decode barcod
 ### Decoding barcodes and QR codes
 
 ![](https://github.com/shejz/Barcode-and-QR-code-scanner/blob/main/qr-barcode.png)
+
+## Detecting Barcodes in Images
+
+The general outline of the algorithm is to:
+
+1. Compute the Scharr gradient magnitude representations in both the x and y direction.
+2. Subtract the y-gradient from the x-gradient to reveal the barcoded region.
+3. Blur and threshold the image.
+4. Apply a closing kernel to the thresholded image.
+5. Perform a series of dilations and erosions.
+6. Find the largest contour in the image, which is now presumably the barcode.
+
+Load our image off disk and convert it to grayscale.then, we use the Scharr operator (specified using ksize = -1 ) to construct the gradient magnitude representation of the grayscale image in the horizontal and vertical directions. From there, we subtract the y-gradient of the Scharr operator from the x-gradient of the Scharr operator. By performing this subtraction we are left with regions of the image that have high horizontal gradients and low vertical gradients.
+
+Our gradient representation of our original image looks like:
+
+![]()
+
+Notice how the barcoded region of the image has been detected by our gradient operations. The next steps will be to filter out the noise in the image and focus solely on the barcode region.
+
+
+### Limitations
+
+It is important to note that since this method makes assumptions regarding the gradient representations of the image, and thus will only work for **horizontal barcodes**.
+
+If you wanted to implement a more robust barcode detection algorithm, you would need to take the orientation of the image into consideration, or better yet, apply machine learning techniques such as Haar cascades or HOG + Linear SVM to “scan” the image for barcoded regions.
