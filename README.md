@@ -28,7 +28,7 @@ Load our image off disk and convert it to grayscale.then, we use the Scharr oper
 
 Our gradient representation of our original image looks like:
 
-![]()
+![](https://github.com/shejz/Barcode-and-QR-code-scanner/blob/main/Detecting%20Barcodes%20in%20Images/gradient_barcode.jpg)
 
 Notice how the barcoded region of the image has been detected by our gradient operations. The next steps will be to filter out the noise in the image and focus solely on the barcode region.
 
