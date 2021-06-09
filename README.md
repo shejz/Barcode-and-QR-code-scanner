@@ -78,8 +78,9 @@ Ih the previous project to [detect barcodes in images](https://github.com/shejz/
 1. A component to detect barcodes in individual frames of a video.
 2. And a “driver” component that accesses the video feed of our camera or video file.
 
-We then applied our simple barcode detector to detect barcodes in video. However, our approach does make some assumptions:
+**We then applied our simple barcode detector to detect barcodes in video. However, our approach does make some assumptions:**
 
-1. The first assumption is that we have a static camera view that is “looking down” on the barcode at a 90-degree angle.
-2. And the second assumption is that we have a “close up” view of the barcode without other interfering objects or noise in the view of the frame.
+1. The first assumption is that we have a static camera that is “looking down” on the barcode at a 90-degree angle. This will ensure that the gradient region of the barcoded image will be found by our simple barcode detector.
+
+2. The second assumption is that our video has a “close up” of the barcode, meaning that we are holding our smartphones directly overtop of the barcode, and not holding the barcode far away from the lens. The farther we move the barcode away from the camera, the less successful our simple barcode detector will be.
 
