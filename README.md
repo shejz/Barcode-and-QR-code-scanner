@@ -70,3 +70,16 @@ Find the largest contour in the image, which if we have done on image processing
 It is important to note that since this method makes assumptions regarding the gradient representations of the image, and thus will only work for **horizontal barcodes**.
 
 If you wanted to implement a more robust barcode detection algorithm, you would need to take the orientation of the image into consideration, or better yet, apply machine learning techniques such as Haar cascades or HOG + Linear SVM to “scan” the image for barcoded regions.
+
+## Real-time barcode detection in video
+
+Ih the previous project to [detect barcodes in images](https://github.com/shejz/Barcode-and-QR-code-scanner/tree/main/Detecting%20Barcodes%20in%20Images). We extended the code into two components:
+
+1. A component to detect barcodes in individual frames of a video.
+2. And a “driver” component that accesses the video feed of our camera or video file.
+
+We then applied our simple barcode detector to detect barcodes in video. However, our approach does make some assumptions:
+
+1. The first assumption is that we have a static camera view that is “looking down” on the barcode at a 90-degree angle.
+2. And the second assumption is that we have a “close up” view of the barcode without other interfering objects or noise in the view of the frame.
+
