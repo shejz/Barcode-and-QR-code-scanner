@@ -1,5 +1,5 @@
 ## Barcode and QR Code Scanner    
-DEMO: [![Nbviewer](https://github.com/jupyter/design/blob/master/logos/Badges/nbviewer_badge.svg)](https://nbviewer.jupyter.org/github/shejz/Barcode-and-QR-code-scanner/blob/main/qr_barcode_scanner.ipynb)
+DEMO: [![Nbviewer](https://github.com/jupyter/design/blob/main/logos/Badges/nbviewer_badge.svg)](https://nbviewer.jupyter.org/github/shejz/Barcode-and-QR-code-scanner/blob/main/qr_barcode_scanner.ipynb)
 
 Barcode and QR code Scanner using ZBar and OpenCV
 
@@ -17,7 +17,7 @@ The **ZBar library** will be used together with OpenCV to scan and decode barcod
 
 ## Detecting Barcodes in Images
 
-DEMO: [![Nbviewer](https://github.com/jupyter/design/blob/master/logos/Badges/nbviewer_badge.svg)](https://nbviewer.jupyter.org/github/shejz/Barcode-and-QR-code-scanner/blob/main/Detecting%20Barcodes%20in%20Images/detecting_barcodes_in_images.ipynb)
+DEMO: [![Nbviewer](https://github.com/jupyter/design/blob/main/logos/Badges/nbviewer_badge.svg)](https://nbviewer.jupyter.org/github/shejz/Barcode-and-QR-code-scanner/blob/main/Detecting%20Barcodes%20in%20Images/detecting_barcodes_in_images.ipynb)
 
 The general outline of the algorithm is to:
 
